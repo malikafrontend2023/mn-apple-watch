@@ -55,6 +55,7 @@ img {
 /* BUTTON */
 .button {
   display: inline-block;
+  min-width: 260px;
   padding: 12px 38px;
   border: 0;
   background-color: var(--primary);
@@ -73,6 +74,31 @@ img {
 
 .button:active {
   opacity: 0.6;
+}
+
+/* BUTTON */
+.lined-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.lined-link::before {
+  width: 40px;
+  height: 3px;
+  margin-right: 10px;
+  background-color: var(--primary);
+  content: "";
+  transition: width 0.3s ease;
+}
+
+.lined-link:hover::before {
+  width: 60px;
 }
 
 /* MAIN-CONTENT */
@@ -184,6 +210,10 @@ img {
   color: #000;
 }
 
+.intro-info-white .intro-heading{
+  color: #fff;
+}
+
 .intro-text {
   margin-top: 0;
   margin-bottom: 30px;
@@ -192,8 +222,94 @@ img {
   border-left: 3px solid #888;
 }
 
+.intro-info-white .intro-text{
+  color: #fff;
+  border-color: #fff;
+}
 
 
+/* FEATURES */
+.features {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.feature-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.feature-item {
+  width: 100%;
+  max-width: 280px;
+}
+
+.feature-item:not(:last-child) {
+  margin-right: 80px;
+}
+
+.feature-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #222;
+  font-weight: bold;
+}
+
+.feature-text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.feature-divider {
+  margin: 0;
+  width: 8px;
+  height: 8px;
+  border: 0;
+  background-color: #ddd;
+  box-shadow: 16px 0 0 0 #ddd,
+    32px 0 0 0 #ddd;
+}
+
+
+/* PROMO */
+.promo {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.promo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.promo-img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* RUNNERS */
+.runners {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background-image: url(../img/runners.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.runners-intro-info {
+  margin-left: auto;
+}
 
 
 
